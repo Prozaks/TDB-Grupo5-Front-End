@@ -1,0 +1,78 @@
+        <br>  
+        <br>  
+        <br>  
+
+<div class="bs-example">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Agregar Tópico</h3>
+        </div>
+        <center>        
+            <div class="panel-body">Escriba el tópico que desea agregar junto con sus sinónimos.</div>
+        </center>
+    <div>
+        <div>
+        <center>
+            <form class="create-user" novalidate>
+                Palabra: <input style="background: #fff" type="text" ng-model="actor.palabra" placeholder="Ingrese un tópico">
+            </form>
+        </center>
+        <br>
+        <center>
+            
+            <form ng-submit="agregarTarea()">
+                Sinónimo:  <input style="background: #fff" type="text" ng-model="nuevaTarea" placeholder="Ingrese un sinónimo">
+                <br><br>
+                <button class="btn btn-primary" type="submit">AGREGAR</button>         
+                <br>
+                    {{mostrar()}}
+        </center>
+                <br>
+
+            <center>
+                
+                <div class="create-user">
+                    <input style="background: #fff" type="button" ng-click="create(actor.palabra)" value="Crear">
+                </div>
+            </center>
+            </form>
+        </div>
+    </div>
+
+        <br>  
+    </div>
+    
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Eliminar Tópico</h3>
+        </div>
+        <center>        
+            <div class="panel-body">Escriba el tópico que desea eliminar.</div>
+        </center>
+        <div>
+            <div>
+                <center>
+                    <form class="create-user" novalidate>
+                        Palabra: <input style="background: #fff" type="text" ng-model="actor.topico" placeholder="  Ingrese el tópico">
+                    </form>  
+                    <br>                
+                    <center>
+                        <input class="btn btn-primary" type="submit" ng-click="delete(actor.topico)" value="Eliminar">
+                    </center>
+                </center>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Lista de Tópicos</h3>
+        </div>
+        <center>
+            <div class="panel-body">Se muestra el listado de las palabras</div>
+        </center>
+            <center ng-repeat="x in lista">
+                {{ x.word }}
+            </center>
+    </div>
+</div>

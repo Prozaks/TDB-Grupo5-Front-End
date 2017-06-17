@@ -1,20 +1,37 @@
-# tbd-angular-2-2016
-Plantilla de aplicación Angular JS para Taller de Base de Datos
+# TDB-ANGULAR-2017 Front-End
+Proyecto de Base de Datos que consiste en una aplicación que permita el análisis de información obtenida a través de Twitter.
 
-Taller
-======
+## Para comenzar
 
-* El objetivo del taller es en primer lugar implementar los códigos para la carga de actores descritos en el siguiente [Gist](https://gist.github.com/dfao/89af90a7d35997751bff)
-* En segundo lugar, se debe extender la funcionalidad original para agregar un nuevo actor a la base de datos
+Se debe clonar el repositorio, en la consola ingresar: 
+``` git clone https://github.com/Prozaks/TDB-Grupo5-Front-End ```
 
-Requerimientos
---------------
+## Instalación
 
-* (Opcional) Node JS y NPM [descarga](https://nodejs.org/en/download/) o por [gestor de paquetes](https://nodejs.org/en/download/package-manager/)
+Debe utilizar:
 
-En caso de utilizar auto-reload y preprocesamiento con sass
- * clonar repositorio
- * descargar librerías con `npm install`
- * ejecutar servidor con `npm run dev`
+### Algún programa o paquete para la visualización en el navegador:
+- Descargar librerías con `npm install` y ejecutar servidor con `npm run dev`
+- Descargar [Brackets](http://brackets.io/) (edior de textos que permite visualizar el código).
+
+Puede utilizar cualquiera de las dos.
+
+### Debe clonar y ejecutar el Back-End de este proyecto:
+- Clonar el repositorio ``` git clone https://github.com/hek23/TBD-Grupo5-1s2017.git ```
+- Debe de tener instalado [Eclipse](http://www.eclipse.org/downloads/).
+- Tener configurado y andando el servidor de [Glassfish](http://www.oracle.com/technetwork/middleware/glassfish/overview/index.html).
 
 
+## ¿Qué incluye?
+- Página web responsive en [AngularJS](https://angularjs.org/)
+- Slider Image.
+- Nav-Bar con dropdowns.
+- Gráficas en [ChartJS](http://www.chartjs.org) (Torta, Lineal).
+- Modo administrador (Elimina y borra tópicos de la bolsa de palabras mediante un servicio).
+- Ránkings de países (Utilización óptima y liviana de banderas) y tópicos.
+- Mapas de distintos tipos.
+- Grafos.
+
+## Autor
+
+* **José Camus** - [Prozaks](https://github.com/Prozaks)

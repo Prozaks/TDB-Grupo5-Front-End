@@ -1,19 +1,26 @@
-<select style="background: #000000" ng-model="selectedTestAccount" ng-selected="false" ng-options="c as c.nombrePais for c in testAccounts | orderBy:'nombrePais'"></select>
-<br><br><br>
-<div>
-	<tt>País Seleccionado: {{selectedTestAccount.nombrePais}}</tt><br><br>
+<!--Código referente a Gráfico de Generación de Información -->
+<div class="service-area bg-color-1 pad120">
+  <div class="container">
+    <div>
+      <h1>Generación de Información</h1>
+      <p>Seleccione un país de la lista para obtener información acerca de ese país específico.</p>
+      <br>
+    </div>
+    <div>
+      <center>
+        <select style="background: #FFFFFF" ng-model="selectedTestAccount" ng-selected="false" ng-options="c as c.nombrePais for c in testAccounts | orderBy:'nombrePais'"></select>
+      </center>
+      <center>
+        <br>
+        <tt>País Seleccionado: {{selectedTestAccount.nombrePais}}</tt>
+      </center>
+      <br>
+    </div>
+    <div>
+      <center>
+        <a href="" class="btn btn-default" ng-click="generar()">Generar</a>
+      </center>
+    </div>
+    <canvas id="myExChart" width="500" height="210" style="display: block; width: 100px; height: 210px;"></canvas>
+  </div>
 </div>
-<div>
-	<a href="" class="btn btn-default" ng-click="generar()">Generar</a>
-</div>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-
-<canvas id="myExChart" width="500" height="210" style="display: block; width: 100px; height: 210px;"></canvas>

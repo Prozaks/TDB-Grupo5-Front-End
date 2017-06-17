@@ -1,68 +1,177 @@
 <!DOCTYPE html>
 <html ng-app="angularSpa">
-    <head>
-        <meta charset="utf-8">
-        <title>WW3</title>
 
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>World War III</title>
+  <meta name="author" content="iThemesLab">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="./styles/main.css">
-        
-        <link href="./styles/app.css" rel="stylesheet" />
+  <!-- favicons -->
+  <link rel="apple-touch-icon" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
 
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  <!-- load google font -->
 
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7cPlayfair+Display:400,700" rel="stylesheet">
+
+  <!-- all stylesheets include start -->
+  <!-- bootstrap v3.3.7 css -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <!-- revolution slider css -->
+  <link rel="stylesheet" href="assets/css/vendor/rev_slider/settings.css">
+  <link rel="stylesheet" href="assets/css/vendor/rev_slider/navigation.css">
+  <!-- fontawesome css -->
+  <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+  <!-- flaticon css -->
+  <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
+  <!-- OwlCarousel css -->
+  <link rel="stylesheet" href="assets/css/vendor/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/vendor/owl.theme.css">
+  <!-- bootstrap date picker -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap-datepicker.standalone.css">
+  <!-- theme style css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- responsive css -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- all stylesheets include end -->
+
+  <!--Angular JS -->
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+
+  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
 
-        <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 
-        <script src="js/controllers/tortaController.js"></script>
+  <script src="js/controllers/tortaController.js"></script>
 
-        <script src="js/controllers/linealController.js"></script>
-        
-        <script src="js/controllers/seleccionController.js"></script>
+  <script src="js/controllers/linealController.js"></script>
 
-        <script src="js/controllers/rankingController.js"></script>
+  <script src="js/controllers/seleccionController.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
-    </head>
+  <script src="js/controllers/rankingController.js"></script>
 
-<body >
-    <nav class="navbar navbar-default">
-  <ul class="nav navbar-nav navbar-right">
-    <li><a href="#/home">Inicio</a></li>
-    <li><a href="#/torta">Gráfico de Torta</a></li>
-    <li><a href="#/lineal">Gráfico Lineal</a></li>
-    <li><a href="#/ranking">Ranking de países mencionados</a></li>
-    <li><a href="#/geolocalizacion">Mapa de Influencias</a></li>
-    <li><a target="_blank" href="./geolocation.html">Mapa Apoyo</a></li>
-    <li><a href="#/seleccion">Generación de información</a></li>
-    <li><a target="_blank" href="./Modo%20Administrador/index.html">Modo Administrador</a></li>
-    
-  </ul>
-</nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
 
-  <center>
-    <img class="logo" src="img/angular.png" alt="logo">
-</center>
-    <div>
-        <section class="fondo final">
-        <header class="envoltura final">
-        </header>
-        <div class="caption final animated wow fadeInDown clearfix">
-            <h1>World War III Project</h1>
-            <div ng-view=""></div>
+  <link href="assets/images/flags/flags32.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <!-- desktop header start -->
+  <div class="header navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- bootstrap-navbar start -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/others/white-logo.png" alt="">
+                </a>
+              </div>
+              <!--/.navbar-header-->
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a target="_blank" href="./Modo%20Administrador/index.html">Modo Administrador</a></li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Gráficos</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/torta">Gráfico de torta</a></li>
+                      <li><a href="#/lineal">Grafico lineal</a></li>
+                      <li><a href="#/seleccion">Gráfico de generación de información</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mapas</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="service-2-col.html">Mapa de Influencias</a></li>
+                      <li><a target="_blank" href="./geolocation.html">Mapa Apoyo</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ránkings</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/rankingPaises">Ránkings de menciones por país</a></li>
+                      <li><a href="#/lineal">Ránkings de tópicos mencionados</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+          <!-- bootstrap-navbar end -->
+
         </div>
-        <div class="shadow"></div>
-        </section>
-    </div>
+        <!--/.col-->
 
+      </div>
+      <!--/.row-->
+    </div>
+    <!--/.container-->
+  </div>
+  <!-- desktop header end -->
+
+  <div ng-view=""></div>
+
+  <!-- all js include start -->
+  <!-- jquery latest version -->
+  <script src="assets/js/vendor/jquery-3.1.1.min.js"></script>
+  <!-- bootstrap latest version -->
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+  <!-- revolution slider js files start -->
+  <script src="assets/js/vendor/rev_slider/jquery.themepunch.tools.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/jquery.themepunch.revolution.min.js"></script>
+
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.actions.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.migration.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="assets/js/vendor/rev_slider/extensions/revolution.extension.video.min.js"></script>
+  <!-- revolution slider js files end -->
+
+  <!--Appear js file-->
+  <script src="assets/js/vendor/jquery.appear.js"></script>
+  <!--CountTo js file-->
+  <script src="assets/js/vendor/jquery.countTo.js"></script>
+  <!--Owl Carousel js file-->
+  <script src="assets/js/vendor/owl.carousel.min.js"></script>
+  <!--bootstrap date picker js file-->
+
+  <!-- template main js file -->
+  <script src="assets/js/main.js"></script>
+  <!-- all js include end -->
 </body>
+
 </html>

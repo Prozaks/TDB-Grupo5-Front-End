@@ -54,21 +54,20 @@
       <thead>
         <tr>
           <th>País</th>
-          <th>Menciones</th>
           <th>Bandera</th>
+          <th>Menciones</th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="x in dataRank | orderBy: '-Puntaje'">
           <td><strong>{{ x.Pais }}</strong></td>
-          <td>{{ x.Puntaje }}</td>
           <td>
             <ul class="f32">
               <li class="flag {{x.Pais}}"></li>
             </ul>
           </td>
+          <td>{{ x.Puntaje }}</td>
         </tr>
       </tbody>
     </table>
-    <canvas id="myLineChart" width="500" height="210" style="display: block; width: 100px; height: 210px;"></canvas>
   </div>

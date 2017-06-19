@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngVis']);
+var app = angular.module('angularSpa');
 
 app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
 
@@ -7,6 +7,16 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
     $scope.onSelect = function(items) {
       // debugger;
       alert('select');
+    };
+
+    $scope.showPopup = function(props) {
+      // debugger;
+      alert('PopUp');
+    };
+
+    $scope.hidePopup = function(props) {
+      // debugger;
+      alert('hideePopUp');
     };
 
     $scope.onClick = function(props) {
@@ -28,6 +38,7 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
       autoResize: true,
       height: '800',
       width: '100%'
+
     };
     var nodes = [];
     var relations = [];
@@ -38,7 +49,7 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
             data:{"statements" : [ {
     "statement" : "MATCH p=()-->() RETURN p"
             }]},
-            headers: {'Authorization': 'Basic ' + btoa("neo4j" + ':' + "441441"),
+            headers: {'Authorization': 'Basic ' + btoa("neo4j" + ':' + "root"),
                 'Accept': 'application/json',
 'Content-type': 'application/json; charset=utf-8','Access-Control-Allow-Origin': '*'}
                 })
@@ -56,17 +67,26 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
             angular.forEach(response.data.results[0].data, function(valor){
                 //Creamos los nodos
                 var numTweetsOrigen = valor.row[0][0].tweetsOriginados + "";
-                var nodoOrigen = {id: valor.meta[0][0].id, 
+                var nodoOrigen = {id: valor.meta[0][0].id,
+                    font: '12px verdana white',
+                    color: 'white', 
+                    value: numTweetsOrigen,
                     shape: 'circularImage',
                     image: DIR +  valor.row[0][0].abreviatura + ".png",
-                    label: valor.row[0][0].pais + "\n Tweets Generados : "+ numTweetsOrigen};
+                    label: valor.row[0][0].pais + "\n Tweets Generados : "+ numTweetsOrigen,
+                    title: 'HOLA'};
                 console.log(valor.row[0][0].abreviatura);
                 var numTweetsDestino = valor.row[0][2].tweetsOriginados + "";
-                var nodoDestino = {id: valor.meta[0][2].id, 
+                
+                var nodoDestino = {id: valor.meta[0][2].id,
+                    font: '12px verdana white',  
+                    value: numTweetsDestino,
+                    color: 'white',
                     shape: 'circularImage',
                     image: DIR +  valor.row[0][2].abreviatura + ".png",
-                    label: valor.row[0][2].pais + "\n Tweets Generados : "+ numTweetsDestino};
-                
+                    label: valor.row[0][2].pais + "\n Tweets Generados : "+ numTweetsDestino,
+                    title: 'HOLA'};
+
                 //Luego se chequea que los nodos no existen en el arreglo. Si no existen, se agregan
                 var insertarOrigen = 1;
                 var insertarDestino = 1;
@@ -85,7 +105,7 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
                 if (insertarDestino === 1){
                     nodes.push(nodoDestino);
                 }
-                var relationship = {from: valor.meta[0][0].id, to: valor.meta[0][2].id};
+                var relationship = {from: valor.meta[0][0].id, to: valor.meta[0][2].id, arrows: 'to', color: 'white'};
                 relations.push(relationship);                       
         })
         $scope.data = {

@@ -42,15 +42,27 @@ var misDatosTorta = angular.module('angularSpa').controller('tortaController', f
         colores.push(obtenerColorRandom());
       }
 
+      var paises=[];
+      for (i=0;i<60;i++)
+      {
+        paises[i]=ejex[i];
+      }
+
+      var datas=[];
+      for (i=0;i<60;i++)
+      {
+        datas[i]=ejey[i];
+      }
+
       $scope.ctdtweets = ctdtweets;
 
       var dataTorta = {
         labels:
         //Aquí aplique la lista de eje x que son las labels
-          ejex,
+          paises,
         datasets: [{
           //Aquí aplique la lista de eje y que son los tweets
-          data: ejey,
+          data: datas,
           backgroundColor: colores,
 
           hoverBackgroundColor: colores,

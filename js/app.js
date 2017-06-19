@@ -1,5 +1,6 @@
 angular.module('angularSpa', [
-  'ngRoute'
+  'ngRoute',
+  'ngVis'
 ])
 
 .config(function($routeProvider) {
@@ -26,6 +27,10 @@ angular.module('angularSpa', [
     .when('/rankingPaises', {
       templateUrl: 'views/rankingPaises.html',
       controller: 'rankingController'
+    })
+    .when('/grafo', {
+      templateUrl: 'views/grafo.html',
+      controller: 'grafoController'
     })
     .otherwise({
       redirectTo: '/home'

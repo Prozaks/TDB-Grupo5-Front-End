@@ -4,7 +4,7 @@
   "description": "Taller de BD",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss ./styles/main.scss   ./styles/main.css",
+    "build-css": "node-sass --include-path scss ./assets/styles/main.scss   ./assets/styles/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "dev": "concurrently --kill-others 'npm run watch-css' 'autoreload-server ./ 8090'"
   },
@@ -23,6 +23,7 @@
     "node-sass": "^3.10.0",
     "nodemon": "^1.10.2",
     "simple-autoreload-server": "^0.1.7"
+    
   }
 }
 

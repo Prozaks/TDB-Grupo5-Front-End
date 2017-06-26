@@ -1,5 +1,5 @@
 //Código referente al controlador del Gráfico de Torta
-var misDatosTorta = angular.module('angularSpa').controller('tortaController', function($scope, $http) {
+var misDatosTorta = angular.module('angularSpa').controller('torta2Controller', function($scope, $http) {
   $scope.importarTorta = function() {
     $http.get('http://localhost:8080/WW3App/auxiliarJsonFullCake').success(function(datos2) {
       $scope.dataTorta = datos2;
@@ -53,41 +53,60 @@ var misDatosTorta = angular.module('angularSpa').controller('tortaController', f
       {
         datas[i]=ejey[i];
       }
-
+        
+              var matrix=[];
+      for (i=0;i<10;i++)
+      {
+        matrix[i]=[paises[i],datas[i]];
+      }
       $scope.ctdtweets = ctdtweets;
-
-      var dataTorta = {
-        labels:
-        //Aquí aplique la lista de eje x que son las labels
-          paises,
-        datasets: [{
-          //Aquí aplique la lista de eje y que son los tweets
-          data: datas,
-          backgroundColor: colores,
-
-          hoverBackgroundColor: colores,
-        }]
-      };
-
-      var optionsTorta = {
-        animation: {
-          animateScale: true
-        }
-      };
-
-      // Chart declaration:
-      var myPieChart = new Chart(torta, {
+    
+        Highcharts.chart('tortaG', {
+    chart: {
         type: 'pie',
-        data: dataTorta,
-        options: optionsTorta
-      });
+        options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'Browser market shares at a specific website, 2014'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            depth: 35,
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: 'Browser share',
+        data: [
+            ['Firefox', 45.0],
+            ['IE', 26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true
+            },
+            ['Safari', 8.5],
+            ['Opera', 6.2],
+            ['Others', 0.7]
+        ]
+    }]
+});
     });
+
   }
   $scope.importarTorta();
 });
-
-misDatosTorta.config(['$httpProvider', function($httpProvider) {
-        $httpProvider.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }
-]);

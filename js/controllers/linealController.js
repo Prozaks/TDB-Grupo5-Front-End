@@ -128,3 +128,9 @@ var misDatosTorta = angular.module('angularSpa').controller('linealController', 
   }
   $scope.importarLineal();
 });
+
+misDatosTorta.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+]);

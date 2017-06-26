@@ -1,5 +1,21 @@
-  //Importing: esri & DOJO libraries
-  require([
+//Código referente al controlador del Ránking de Países
+
+var misDatosTorta = angular.module('angularSpa').controller('rankingController', function($scope, $http) {
+  $scope.importarRank = function() {
+    $http.get('http://localhost:8080/WW3App/rankingJSON/').success(function(datos2) {
+      $scope.dataRank = datos2;
+    });
+
+    $http.get('coordenates.json').success(function(datos3) {
+      $scope.dataCites = datos3;
+    });
+
+
+
+
+
+      //Importing: esri & DOJO libraries
+    require([
     "esri/views/MapView",
     "esri/Map",
     "esri/layers/FeatureLayer",
@@ -149,6 +165,45 @@
         .then(createLegend)
         .otherwise(errback);
     });
+
+    var i=0;
+    var aux = [];
+    for (i=0;i<60;i++)
+    {
+      aux[i]=
+      {
+        "type": "Feature",
+        "properties": {
+          "tweetId": 1,
+          "country": datos3[i].countryName,
+          "hits": datos2[i].puntaje
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-70.5980822, -33.4557658]
+        }
+      }
+    }
+
+    var json = {
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Tweets about third world war"
+  },
+  "features": [{
+      "type": "Feature",
+      "properties": {
+        "tweetId": 1,
+        "country": "Chile",
+        "hits": 56
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.5980822, -33.4557658]
+      }
+    }
+  ]
+}
     //JSON Object is invoked here
     function getData() {
       //URL with JSON Object
@@ -229,3 +284,24 @@
       console.error("Creating legend failed. ", error);
     }
   });
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+  $scope.importarRank();
+});
+
+
+

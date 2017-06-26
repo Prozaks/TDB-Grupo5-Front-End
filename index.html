@@ -44,29 +44,19 @@
 
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
 
-  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-
+  <!--<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+-->
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
-
   <script src="js/app.js"></script>
-
   <script src="js/controllers/tortaController.js"></script>
-
   <script src="js/controllers/linealController.js"></script>
-
   <script src="js/controllers/seleccionController.js"></script>
-
   <script src="js/controllers/rankingController.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
-
   <link href="assets/images/flags/flags32.css" rel="stylesheet" type="text/css">
-
 
   <!-- NUEVOS-->
 
@@ -77,12 +67,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/locales.min.js"></script>
   <script src="js/controllers/grafoController.js"></script>
+  <script src="js/controllers/mapController.js"></script>
+  <script src="js/controllers/torta2Controller.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="https://www.workshape.io/js/geo/d3.geo.zoom.js"></script>
+    
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 </head>
 
 <body>
-
-  <!-- desktop header start -->
+<!-- desktop header start -->
   <div class="header navbar-fixed-top">
     <div class="container">
       <div class="row">
@@ -112,7 +110,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ránkings</a>
                     <ul class="dropdown-menu">
                       <li><a href="#/rankingPaises">Ránkings de menciones por país</a></li>
-                      <li><a href="#/lineal">Ránkings de tópicos mencionados</a></li>
+                      <li><a href="/home">Ránkings de tópicos mencionados</a></li>
                     </ul>
                   </li>
                   <li><a target="_blank" href="./Modo%20Administrador/index.html">Modo Administrador</a></li>
@@ -120,6 +118,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Gráficos</a>
                     <ul class="dropdown-menu">
                       <li><a href="#/torta">Gráfico de torta</a></li>
+                       <!-- <li><a href="#/torta2">Gráfico de torta 3D</a></li> -->
                       <li><a href="#/lineal">Grafico lineal</a></li>
                       <li><a href="#/seleccion">Gráfico de generación de información</a></li>
                     </ul>
@@ -129,6 +128,7 @@
                     <ul class="dropdown-menu">
                       <li><a href="#/grafo">Mapa de Influencias</a></li>
                       <li><a target="_blank" href="./geolocation.html">Mapa Apoyo</a></li>
+                      <li><a href="#/map">Mapa Coroplético</a></li>
                     </ul>
                   </li>
                   
@@ -140,17 +140,14 @@
             <!-- /.container-fluid -->
           </nav>
           <!-- bootstrap-navbar end -->
-
         </div>
         <!--/.col-->
-
       </div>
       <!--/.row-->
     </div>
     <!--/.container-->
   </div>
   <!-- desktop header end -->
-
   <div ng-view=""></div>
 
   <!-- all js include start -->
@@ -186,5 +183,4 @@
   <script src="assets/js/main.js"></script>
   <!-- all js include end -->
 </body>
-
 </html>

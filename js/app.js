@@ -32,6 +32,10 @@ angular.module('angularSpa', [
       templateUrl: 'views/grafo.html',
       controller: 'grafoController'
     })
+    .when('/map', {
+      templateUrl: 'views/map.html',
+      controller: 'mapController'
+    })
     .otherwise({
       redirectTo: '/home'
     });

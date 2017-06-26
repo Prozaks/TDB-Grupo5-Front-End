@@ -1,15 +1,15 @@
 .f32 .flag{display:inline-block;height:32px;width:32px;vertical-align:text-top;line-height:32px;background:url(/assets/images/flags/flags32.png) no-repeat;}
 .f32 .Andorra{background-position:0 -704px;}
-.f32 .UnitedArabEmirates{background-position:0 -736px;}
+.f32 .United.Arab.Emirates{background-position:0 -736px;}
 .f32 .Afghanistan{background-position:0 -768px;}
-.f32 .Antigua and Barbuda{background-position:0 -800px;}
+.f32 .Antigua.and.Barbuda{background-position:0 -800px;}
 .f32 .Anguilla{background-position:0 -832px;}
 .f32 .Albania{background-position:0 -864px;}
 .f32 .Armenia{background-position:0 -896px;}
 .f32 .Angola{background-position:0 -928px;}
 .f32 .Antarctica{background-position:0 -960px;}
 .f32 .Argentina{background-position:0 -992px;}
-.f32 .American Samoa{background-position:0 -1024px;}
+.f32 .American.Samoa{background-position:0 -1024px;}
 .f32 .Austria{background-position:0 -1056px;}
 .f32 .Australia{background-position:0 -1088px;}
 .f32 .Aruba{background-position:0 -1120px;}
@@ -24,8 +24,8 @@
 .f32 .Bahrain{background-position:0 -1408px;}
 .f32 .Burundi{background-position:0 -1440px;}
 .f32 .Benin{background-position:0 -1472px;}
-.f32 .bermuda{background-position:0 -1504px;}
-.f32 .Brunei.Darussalam{background-position:0 -1536px;}
+.f32 .Bermuda{background-position:0 -1504px;}
+.f32 .Brunei{background-position:0 -1536px;}
 .f32 .Bolivia{background-position:0 -1568px;}
 .f32 .Brazil{background-position:0 -1600px;}
 .f32 .Bahamas{background-position:0 -1632px;}
@@ -34,20 +34,20 @@
 .f32 .Belarus{background-position:0 -1728px;}
 .f32 .Belize{background-position:0 -1760px;}
 .f32 .Canada{background-position:0 -1792px;}
-.f32 .Congo.the.Democratic.Republic.of.the{background-position:0 -1824px;}
+.f32 .Congo.The.Democratic.Republic.of.the{background-position:0 -1824px;}
 .f32 .Central.African.Republic{background-position:0 -1856px;}
 .f32 .Congo{background-position:0 -1888px;}
 .f32 .Switzerland{background-position:0 -1920px;}
-.f32 .Cook.Island{background-position:0 -1984px;}
+.f32 .Cook.Islands{background-position:0 -1984px;}
 .f32 .Chile{background-position:0 -2016px;}
 .f32 .Cameroon{background-position:0 -2048px;}
 .f32 .China{background-position:0 -2080px;}
 .f32 .Colombia{background-position:0 -2112px;}
 .f32 .Costa.Rica{background-position:0 -2144px;}
 .f32 .Cuba{background-position:0 -2176px;}
-.f32 .Cabo.Verde{background-position:0 -2208px;}
+.f32 .Cape.Verde{background-position:0 -2208px;}
 .f32 .Cyprus{background-position:0 -2240px;}
-.f32 .Czechia{background-position:0 -2272px;}
+.f32 .Czech.Republic{background-position:0 -2272px;}
 .f32 .Germany{background-position:0 -2304px;}
 .f32 .Djibouti{background-position:0 -2336px;}
 .f32 .Denmark{background-position:0 -2368px;}
@@ -63,10 +63,10 @@
 .f32 .Ethiopia{background-position:0 -2688px;}
 .f32 .Finland{background-position:0 -2720px;}
 .f32 .Fiji{background-position:0 -2752px;}
-.f32 .Faroe.Island{background-position:0 -2816px;}
+.f32 .Faroe.Islands{background-position:0 -2816px;}
 .f32 .France{background-position:0 -2848px;}  .f32 .bl, .f32 .cp, .f32 .mf, .f32 .yt{background-position:0 -2848px;}
 .f32 .Gabon{background-position:0 -2880px;}
-.f32 .United.Kingdom.of.Great.Britain.and.Northern.Ireland{background-position:0 -2912px;}  .f32 .sh{background-position:0 -2912px;}
+.f32 .United.Kingdom{background-position:0 -2912px;}  .f32 .sh{background-position:0 -2912px;}
 .f32 .Grenada{background-position:0 -2944px;}
 .f32 .Georgia{background-position:0 -2976px;}
 .f32 .Guernsey{background-position:0 -3008px;}
@@ -110,7 +110,7 @@
 .f32 .South.Korea{background-position:0 -4224px;}
 .f32 .Kuwait{background-position:0 -4256px;}
 .f32 .Cayman.Islands{background-position:0 -4288px;}
-.f32 .Kazakhastan{background-position:0 -4320px;}
+.f32 .Kazakstan{background-position:0 -4320px;}
 .f32 .Laos{background-position:0 -4352px;}
 .f32 .Lebanon{background-position:0 -4384px;}
 .f32 .Saint.Lucia{background-position:0 -4416px;}
@@ -121,7 +121,7 @@
 .f32 .Lithuania{background-position:0 -4576px;}
 .f32 .Luxembourg{background-position:0 -4608px;}
 .f32 .Latvia{background-position:0 -4640px;}
-.f32 .Libya{background-position:0 -4672px;}
+.f32 .Libyan.Arab.Jamahiriya{background-position:0 -4672px;}
 .f32 .Morocco{background-position:0 -4704px;}
 .f32 .Moldova{background-position:0 -4736px;}
 .f32 .Montenegro{background-position:0 -4768px;}
@@ -140,7 +140,7 @@
 .f32 .Maldives{background-position:0 -5184px;}
 .f32 .Malawi{background-position:0 -5216px;}
 .f32 .Mexico{background-position:0 -5248px;}
-.f32 .Malasya{background-position:0 -5280px;}
+.f32 .Malaysia{background-position:0 -5280px;}
 .f32 .Mozambique{background-position:0 -5312px;}
 .f32 .Namibia{background-position:0 -5344px;}
 .f32 .New.Caledonia{background-position:0 -5376px;}
@@ -152,19 +152,19 @@
 .f32 .bv, .f32 .nq, .f32 .sj{background-position:0 -5536px;}
 .f32 .Nepal{background-position:0 -5568px;}
 .f32 .Nauru{background-position:0 -5600px;}
-.f32 .New.Zeland{background-position:0 -5632px;}
+.f32 .New.Zealand{background-position:0 -5632px;}
 .f32 .Oman{background-position:0 -5664px;}
 .f32 .Panama{background-position:0 -5696px;}
 .f32 .Peru{background-position:0 -5728px;}
-.f32 .French.Polynesia{background-position:0 -5760px;}
-.f32 .papua.New.Guinea{background-position:0 -5792px;}
+.f32 .French.Southern.territories{background-position:0 -5760px;}
+.f32 .Papua.New.Guinea{background-position:0 -5792px;}
 .f32 .Philippines{background-position:0 -5824px;}
 .f32 .Pakistan{background-position:0 -5856px;}
 .f32 .Poland{background-position:0 -5888px;}
 .f32 .Puerto.Rico{background-position:0 -5920px;}
 .f32 .Palestine{background-position:0 -5952px;}
 .f32 .Portugal{background-position:0 -5984px;}
-.f32 .palau{background-position:0 -6016px;}
+.f32 .Palau{background-position:0 -6016px;}
 .f32 .Paraguay{background-position:0 -6048px;}
 .f32 .Qatar{background-position:0 -6080px;}
 .f32 .R\00E9union{background-position:0 -6112px;}
@@ -173,7 +173,7 @@
 .f32 .Russian.Federation{background-position:0 -6208px;}
 .f32 .Rwanda{background-position:0 -6240px;}
 .f32 .Saudi.Arabia{background-position:0 -6272px;}
-.f32 .Solomon.Island{background-position:0 -6304px;}
+.f32 .Solomon.Islands{background-position:0 -6304px;}
 .f32 .Seychelles{background-position:0 -6336px;}
 .f32 .Sudan{background-position:0 -6368px;}
 .f32 .Sweden{background-position:0 -6400px;}
@@ -187,14 +187,14 @@
 .f32 .Suriname{background-position:0 -6656px;}
 .f32 .Sao.Tome.and.Principe{background-position:0 -6688px;}
 .f32 .El.Salvador{background-position:0 -6720px;}
-.f32 .Syrian.Arab.Republic{background-position:0 -6752px;}
+.f32 .Syria{background-position:0 -6752px;}
 .f32 .Swaziland{background-position:0 -6784px;}
 .f32 .Turks.and.Caicos.Islands{background-position:0 -6816px;}
 .f32 .Chad{background-position:0 -6848px;}
 .f32 .Togo{background-position:0 -6880px;}
 .f32 .Thailand{background-position:0 -6912px;}
 .f32 .Tajikistan{background-position:0 -6944px;}
-.f32 .Timorfeff005fLeste{background-position:0 -6976px;}
+.f32 .East.Timor{background-position:0 -6976px;}
 .f32 .Turkmenistan{background-position:0 -7008px;}
 .f32 .Tunisia{background-position:0 -7040px;}
 .f32 .Tonga{background-position:0 -7072px;}

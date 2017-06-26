@@ -55,10 +55,9 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
                 })
                 .then(function(response){
             //cada elemento es un nodo
-            //console.log(response.data.results[0])
             var largo = response.data.results[0].data.length;
             var DIR = "/assets/images/banderitas/"
-            //console.log(response.data.results[0].data[0].row[0][2]);
+
             //Se saca paralelamente todo por la estructura del JSON de Neo4J
             //La estructura del nodo:
             //id nodo, numTweets, abreviatura y nombre del pais
@@ -75,7 +74,6 @@ app.controller('grafoController', ['$scope', '$http', 'VisDataSet',
                     image: DIR +  valor.row[0][0].abreviatura + ".png",
                     label: valor.row[0][0].pais + "\n Tweets Generados : "+ numTweetsOrigen,
                     title: 'HOLA'};
-                console.log(valor.row[0][0].abreviatura);
                 var numTweetsDestino = valor.row[0][2].tweetsOriginados + "";
                 
                 var nodoDestino = {id: valor.meta[0][2].id,

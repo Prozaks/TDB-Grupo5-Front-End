@@ -1314,3 +1314,84 @@ a:focus {
 /* 04 footer start */
 
 /*# sourceMappingURL=style.css.map */
+svg {
+    width: 100%
+}
+
+path {
+    fill: none;
+    stroke: black
+}
+
+.background {
+  fill: rgba(200,212,220,.5);
+  stroke-width: .8px;
+  stroke: black;
+}
+
+.graticule {
+    stroke: rgba(0,0,0, .2);
+    stroke-width: .5px;
+}
+
+.country {
+    cursor: pointer;
+}
+
+.country .land, .state .land {
+    fill: white;
+    stroke: rgba(0,0,0, .2);
+    stroke-width .3px;
+}
+
+.state .overlay {
+    fill: blue;
+    fill-opacity: 0;
+}
+
+.country .overlay {
+    fill: orange;
+    fill-opacity: 0;
+}
+
+/* Content Boxes
+———————————————————— */
+.content-box-blue,
+.content-box-gray,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+overflow: hidden;
+padding: 20px;
+}
+
+.content-box-blue {
+background-color: #d8ecf7;
+border: 1px solid #afcde3;
+}
+
+.content-box-gray {
+background-color: #e2e2e2;
+border: 1px solid #bdbdbd;
+}
+
+.content-box-green {
+background-color: #d9edc2;
+border: 1px solid #b2ce96;
+}
+
+.content-box-purple {
+background-color: #e2e2f9;
+border: 1px solid #bebde9;
+}
+
+.content-box-red {
+background-color: #f9dbdb;
+border: 1px solid #e9b3b3;
+}
+
+.content-box-yellow {
+background-color: white;
+border: 1px solid white;
+}

@@ -7,10 +7,13 @@ var app = angular.module("angularSpa");
                 data: '=?'
             },
             template: 
+            '<div class="service-area bg-color-1"><h1> Seleccione un país para visualizar su información</h1></div>' +
+            '<div>El mapa refleja las menciones realizadas en cada país. A medida que el color del país se vuelve rojo, mayor cantidad de menciones se han realizado allí</div>'+
+            '<br>'+
+            '<div class="info" ></div>' +
+            '<br>'+
             '<div class="globe-wrapper">' +
                 '<div class="globe"></div>' +
-                '<div class="content-box-yellow" style="color:#0000FF">El mapa refleja las menciones realizadas en cada país. A medida que el color del país se vuelve rojo, mayor cantidad de menciones se han realizado allí</div>'+
-                '<div class="info content-box-yellow" style="color:#0000FF" width="500" height="210"> Seleccione un país para visualizar su información</div>' +
             '</div>',
             link: link
         };

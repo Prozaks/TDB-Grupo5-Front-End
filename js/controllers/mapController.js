@@ -82,7 +82,7 @@ function jsonConcat(o1, o2) {
     }
 $.ajax({
     url: 'http://localhost:8080/WW3App/mapaCalor',
-    dataType: 'jsonp',
+    dataType: 'json',
     async: false,
     success: function(data) {
         result = data;
